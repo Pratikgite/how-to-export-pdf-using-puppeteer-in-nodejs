@@ -5,10 +5,8 @@ const { path } = require("path");
 // const { readFile } = require('util').promisify(fs.readFile);
 
 exports.pdfExport = async (req, res) => {
-    console.log("working pdf route");
-
     try {
-        const url = `https://google.com/`;
+        const url = `https://google.com/`;  // url what you want to export.
         const browser = await puppeteer.launch({
             headless: true
         });
@@ -35,7 +33,7 @@ exports.pdfExport = async (req, res) => {
 
     } catch(err) {
         console.log(err);
-        res.send('Something went wrong.')
+        res.status(500).send('Something went wrong,', err);
     }
 };
 
