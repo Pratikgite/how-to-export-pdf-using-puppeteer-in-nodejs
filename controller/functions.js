@@ -58,7 +58,7 @@ exports.chatbot = async (req,res) => {
     return 1;
     
     const configuration = new Configuration({
-        apiKey: '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',
+        apiKey: '',
     });
 
     const openai = new OpenAIAPI(configuration);
